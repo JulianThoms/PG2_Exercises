@@ -59,18 +59,14 @@ public class University {
 				i++;
 			}
 			userinput = sc.nextLine();
-			if (userinput == null || userinput.equals("")) {
-				continue;
-			} else {
+			if (userinput != null && !userinput.equals("")) {
 				try {
 					chosenNumber = Integer.parseInt(userinput);
 					--chosenNumber;
 				} catch (Exception e) {
 					continue;
 				}
-				if (courseOfStudies.size() < chosenNumber) {
-					continue;
-				} else {
+				if (courseOfStudies.size() >= chosenNumber) {
 					newCourseOfStudy = courseOfStudies.get(chosenNumber);
 					break;
 				}
